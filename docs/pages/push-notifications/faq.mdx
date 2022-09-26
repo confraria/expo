@@ -21,15 +21,15 @@ Total notifications is much less important than your maximum notification throug
 
 You should read **all** the relevant guides (this won't take longer than 10 minutes):
 
-- [Initial Setup](/push-notifications/push-notifications-setup.md)
-  - [Android-specific setup](/push-notifications/using-fcm.md)
-- [Receiving notifications in your app](/push-notifications/receiving-notifications.md)
-- [Sending notifications](/push-notifications/sending-notifications.md)
-- [`expo-notifications` client-side library documentation](/versions/latest/sdk/notifications.md)
+- [Initial Setup](/push-notifications/push-notifications-setup.mdx)
+  - [Android-specific setup](/push-notifications/using-fcm.mdx)
+- [Receiving notifications in your app](/push-notifications/receiving-notifications.mdx)
+- [Sending notifications](/push-notifications/sending-notifications.mdx)
+- [`expo-notifications` client-side library documentation](/versions/latest/sdk/notifications.mdx)
 
 ### Do I have to use Expo's push notification service?
 
-No, you can use any push notification service for both managed and bare workflow apps. The [`getDevicePushTokenAsync` method from `expo-notifications`](/versions/latest/sdk/notifications/#getdevicepushtokenasync-devicepushtoken) allows you to get the native device push token, which you can then use with other services, or even [send your notifications through APNs and FCM directly](/push-notifications/sending-notifications-custom.md).
+No, you can use any push notification service for both managed and bare workflow apps. The [`getDevicePushTokenAsync` method from `expo-notifications`](/versions/latest/sdk/notifications/#getdevicepushtokenasync-devicepushtoken) allows you to get the native device push token, which you can then use with other services, or even [send your notifications through APNs and FCM directly](/push-notifications/sending-notifications-custom.mdx).
 
 That being said, we think sending notifications through Expo is the fastest and easiest way to do it, and millions of notifications are sent through Expo every day.
 
@@ -71,9 +71,9 @@ The `ExpoPushToken` will never "expire" but if one of your users uninstalls the 
 
 ### Push notifications work in development, but not after I build the app
 
-This strongly indicates that you have either misconfigured your credentials, or didn't configure them at all. In the Expo Go app, you rely on Expo's credentials so that you don't need to worry about it, and setup is as easy as possible. But when you build your own app for the stores, you need to use your own credentials. On iOS, this is handled via your [push key](/app-signing/app-credentials/#push-notification-keys) (revoking the push key associated with your app **will result in your notifications failing to be delivered**. To fix that, add a new push key with `eas credentials`). On Android, all you need to do is follow [this guide](/push-notifications/using-fcm.md). **Please note** that after setting up Android FCM credentials, you will need to rebuild your app.
+This strongly indicates that you have either misconfigured your credentials, or didn't configure them at all. In the Expo Go app, you rely on Expo's credentials so that you don't need to worry about it, and setup is as easy as possible. But when you build your own app for the stores, you need to use your own credentials. On iOS, this is handled via your [push key](/app-signing/app-credentials/#push-notification-keys) (revoking the push key associated with your app **will result in your notifications failing to be delivered**. To fix that, add a new push key with `eas credentials`). On Android, all you need to do is follow [this guide](/push-notifications/using-fcm.mdx). **Please note** that after setting up Android FCM credentials, you will need to rebuild your app.
 
-Expo abstracts the majority of credential management away so that you can focus on building your app, but if you want to understand it on a deeper level, read our [guide to app signing](/app-signing/app-credentials.md).
+Expo abstracts the majority of credential management away so that you can focus on building your app, but if you want to understand it on a deeper level, read our [guide to app signing](/app-signing/app-credentials.mdx).
 
 ### Push notifications _occasionally_ stop coming through on Android
 

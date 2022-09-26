@@ -7,7 +7,7 @@ import { Terminal } from '~/ui/components/Snippet';
 
 Environment variables are key-value pairs configured outside your source code that allow your app to behave differently depending on the environment. For example, you can enable or disable certain features when building a testing version of your app, or you can switch to a different API endpoint when building for production.
 
-> Are you using [EAS Build](/build/introduction/)? The EAS Build documentation on [environment variables and build secrets](/build-reference/variables.md) explains how to work with sensitive values that you would not include in your source code and Git repository. It also explains how to set environment variables for build profiles.
+> Are you using [EAS Build](/build/introduction/)? The EAS Build documentation on [environment variables and build secrets](/build-reference/variables.mdx) explains how to work with sensitive values that you would not include in your source code and Git repository. It also explains how to set environment variables for build profiles.
 
 ## Using the `extra` field
 
@@ -37,7 +37,7 @@ API_URL="https://production.example.com" npx expo start
 
 ### Reading environment variables
 
-To read `extra` properties in your app, you can use the [`expo-constants`](/versions/latest/sdk/constants.md) library. The `extra` property is available on the `Constants.expoConfig` property.
+To read `extra` properties in your app, you can use the [`expo-constants`](/versions/latest/sdk/constants.mdx) library. The `extra` property is available on the `Constants.expoConfig` property.
 
 ```tsx
 import { Button } from 'react-native';
@@ -68,7 +68,7 @@ const API_URL = 'https://production.example.com';
 
 ### Installing and configuring babel-plugin-transform-inline-environment-variables
 
-To use [`babel-plugin-transform-inline-environment-variables`](https://github.com/babel/website/blob/master/docs/plugin-transform-inline-environment-variables.md), install the library and add it to your Babel config, then restart your development server and clear the cache.
+To use [`babel-plugin-transform-inline-environment-variables`](https://github.com/babel/website/blob/master/docs/plugin-transform-inline-environment-variables.mdx), install the library and add it to your Babel config, then restart your development server and clear the cache.
 
 <Terminal cmd={['$ npm install --save-dev babel-plugin-transform-inline-environment-variables']} />
 

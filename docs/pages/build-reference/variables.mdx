@@ -4,7 +4,7 @@ title: Environment variables and secrets
 
 import { Collapsible } from '~/ui/components/Collapsible';
 
-The ["Environment variables in Expo"](/guides/environment-variables.md) guide presents several options for how you can access system environment variables to your app JavaScript code. This can be a useful way to inject values in your code, but [these values should not be secrets](/guides/environment-variables.md#security-considerations), and so the value it provides can be summarized as a convenience for accommodating certain development workflows.
+The ["Environment variables in Expo"](/guides/environment-variables.mdx) guide presents several options for how you can access system environment variables to your app JavaScript code. This can be a useful way to inject values in your code, but [these values should not be secrets](/guides/environment-variables.md#security-considerations), and so the value it provides can be summarized as a convenience for accommodating certain development workflows.
 
 Using the techniques described in the environment variables document above, environment variables are inlined (the `process.env.X` text is replaced with its evaluated result) in your app's JavaScript code _at the time that the app is built_, and included in the app bundle. This means that the substitution would occur on EAS Build servers and not on your development machine, so if you tried to run a build on EAS Build without explicitly providing values or fallbacks for the environment variables, then you are likely to encounter either a build-time or runtime error.
 
@@ -26,7 +26,7 @@ You can specify environment variables for specific build jobs using **eas.json**
 }
 ```
 
-You can access these variables in your application using the techniques described in the ["Environment variables in Expo"](/guides/environment-variables.md) guide. You can also share common configurations between different build profiles using the `"extends"` property, if both profiles have an `env` object defined, content will be merged.
+You can access these variables in your application using the techniques described in the ["Environment variables in Expo"](/guides/environment-variables.mdx) guide. You can also share common configurations between different build profiles using the `"extends"` property, if both profiles have an `env` object defined, content will be merged.
 
 ```json
 {
@@ -44,7 +44,7 @@ You can access these variables in your application using the techniques describe
 }
 ```
 
-See the [eas.json reference](/build/eas-json.md) for more information.
+See the [eas.json reference](/build/eas-json.mdx) for more information.
 
 ## Environment variables and app.config.js
 
@@ -252,4 +252,4 @@ Environment variables set in your build profile that impact **app.config.js** wi
 
 ### Can I just set my environment variables on a CI provider?
 
-Environment variables must be defined in **eas.json** in order to be made available to EAS Build workers. If you are [triggering builds from CI](/build/building-on-ci.md) this same rule applies, and you should be careful to not confuse setting environment variables on GitHub Actions (or the provider of your choice) with setting environment variables and secrets in **eas.json**.
+Environment variables must be defined in **eas.json** in order to be made available to EAS Build workers. If you are [triggering builds from CI](/build/building-on-ci.mdx) this same rule applies, and you should be careful to not confuse setting environment variables on GitHub Actions (or the provider of your choice) with setting environment variables and secrets in **eas.json**.

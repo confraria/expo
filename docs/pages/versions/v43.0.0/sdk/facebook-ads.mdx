@@ -27,12 +27,12 @@ You need to create a placement ID to display ads. Follow steps 1 and 3 from the 
 
 ### Configuration in app.json / app.config.js
 
-You can configure `expo-ads-facebook` using its built-in [config plugin](../../../guides/config-plugins.md) if you use config plugins in your project ([EAS Build](../../../build/introduction.md) or `expo run:[android|ios]`). The plugin allows you to configure various properties that cannot be set at runtime and require building a new app binary to take effect.
+You can configure `expo-ads-facebook` using its built-in [config plugin](../../../guides/config-plugins.mdx) if you use config plugins in your project ([EAS Build](../../../build/introduction.mdx) or `expo run:[android|ios]`). The plugin allows you to configure various properties that cannot be set at runtime and require building a new app binary to take effect.
 
-In your project's [app.json](../../../workflow/configuration.md), add your [Facebook App ID and Facebook Display Name](https://developers.facebook.com/docs/facebook-login/ios) under the `facebookAppId` and `facebookDisplayName` keys.
+In your project's [app.json](../../../workflow/configuration.mdx), add your [Facebook App ID and Facebook Display Name](https://developers.facebook.com/docs/facebook-login/ios) under the `facebookAppId` and `facebookDisplayName` keys.
 
 - In the Expo Go app, all of your Facebook API calls will be made with Expo's Facebook App ID. This means you will not see any related ad info in your Facebook developer page while running your project in Expo Go.
-- To use your app's own Facebook App ID (and thus see any related ad info in your Facebook developer page), you'll need to [build a standalone app](../../../distribution/building-standalone-apps.md).
+- To use your app's own Facebook App ID (and thus see any related ad info in your Facebook developer page), you'll need to [build a standalone app](../../../distribution/building-standalone-apps.mdx).
 
 <ConfigClassic>
 

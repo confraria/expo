@@ -32,7 +32,7 @@ For example, you might see something like this on your Android builds:
 `[stderr] Note: Recompile with -Xlint:deprecation for details.`
 ]} />
 
-While you may or may not be interested in following up on that warning, it is not the cause of your failed build. So how do you know which logs are truly responsible? If you are building a bare project, you will already be good at this. If you are building a [managed project](/introduction/managed-vs-bare.md), it may be tricky because you don't directly interact with the native code, only write JavaScript.
+While you may or may not be interested in following up on that warning, it is not the cause of your failed build. So how do you know which logs are truly responsible? If you are building a bare project, you will already be good at this. If you are building a [managed project](/introduction/managed-vs-bare.mdx), it may be tricky because you don't directly interact with the native code, only write JavaScript.
 
 A good path forward is to **determine if the build failed due to a native or JavaScript error**. When your build fails due to a JavaScript build error, you will usually see something like this:
 
@@ -47,7 +47,7 @@ It's important to note that with iOS builds the build details page only displays
 
 {/* TODO: native and js build phases should be separate in eas build logs, this is too much work for people to figure out */}
 
-If you are working on a managed app and the build error is a native error rather than a JavaScript error, this is likely due to a [config plugin](/guides/config-plugins.md) or a dependency in your project. Keep an eye out in the logs for any new packages that you've added since your previous successful build. Run `expo doctor` to determine that the versions of Expo SDK dependencies in your project are compatible with your Expo SDK version.
+If you are working on a managed app and the build error is a native error rather than a JavaScript error, this is likely due to a [config plugin](/guides/config-plugins.mdx) or a dependency in your project. Keep an eye out in the logs for any new packages that you've added since your previous successful build. Run `expo doctor` to determine that the versions of Expo SDK dependencies in your project are compatible with your Expo SDK version.
 
 Armed with your error logs, you can often start to fix your build, or you can search the [forums](https://forums.expo.dev) and GitHub issues for related packages to dig deeper. Some common sources of problems are listed below.
 
@@ -57,7 +57,7 @@ Monorepos are incredibly useful but they do introduce their own set of problems.
 
 With EAS Build, it's necessary to upload the entire monorepo to the build worker, set it up, and run the build; but, on `expo build` you only had to be able to build the JavaScript bundle locally and upload that to the worker.
 
-EAS Build is more like a typical CI service in that we need the source code, rather than a compiled JavaScript bundle and manifest. EAS Build has first-class support for Yarn workspaces, and [your success may vary when using other monorepo tools](/build-reference/limitations.md).
+EAS Build is more like a typical CI service in that we need the source code, rather than a compiled JavaScript bundle and manifest. EAS Build has first-class support for Yarn workspaces, and [your success may vary when using other monorepo tools](/build-reference/limitations.mdx).
 
 {/* TODO: link to monorepos guide when ready */}
 
@@ -71,7 +71,7 @@ This can often be a sign that your app bundle is extremely large, which will mak
 
 To determine how large your bundle is and to see a breakdown of where the size comes from, use [react-native-bundle-visualizer](https://github.com/IjzerenHein/react-native-bundle-visualizer).
 
-It's not yet possible to increase memory limits on your build workers, [only one worker configuration is currently available](/build-reference/limitations.md).
+It's not yet possible to increase memory limits on your build workers, [only one worker configuration is currently available](/build-reference/limitations.mdx).
 
 </Collapsible>
 
@@ -92,10 +92,10 @@ This behavior comes from React Native on iOS, in the future we plan to rewrite t
 If the logs weren't enough to immediately help you understand and fix the root cause, it's time to try to reproduce the issue locally. If your project builds and runs locally in release mode then it will also build on EAS Build, provided that the following are all true:
 
 - Relevant Build tool versions (eg: Xcode, Node, npm, Yarn) are the same in both environments. [Learn more](/build/eas-json.md#configuring-your-build-tools).
-- Relevant environment variables are the same in both environments. [Learn more](/build-reference/variables.md).
+- Relevant environment variables are the same in both environments. [Learn more](/build-reference/variables.mdx).
 - The archive that is uploaded to EAS Build includes the same relevant source files. [Learn more](https://expo.fyi/eas-build-archive).
 
-You can verify that your project builds on your local machine with the `expo run` commands with variant/configuration flags set to release to most faithfully reproduce what executes on EAS Build. (Learn more about the [iOS build process](/build-reference/ios-builds.md) and [Android build process](/build-reference/android-builds.md)).
+You can verify that your project builds on your local machine with the `expo run` commands with variant/configuration flags set to release to most faithfully reproduce what executes on EAS Build. (Learn more about the [iOS build process](/build-reference/ios-builds.mdx) and [Android build process](/build-reference/android-builds.mdx)).
 
 <Terminal cmd={[
 '# Locally compile and run the Android app in release mode',
@@ -128,7 +128,7 @@ There are two ways to approach this, which are quite similar:
 
 ### Why does my app work in Expo Go and `expo build:[android|ios]` but not with EAS Build?
 
-The classic build service (`expo build`) works completely differently from EAS Build, and there is no guarantee that your app will work out of the box on EAS Build if it works on the classic build service. You can learn more about [migrating from `expo build` in the guide](/build-reference/migrating.md), and get a better understanding of how these two services are fundamentally different in [this two-part blog post](https://blog.expo.dev/expo-managed-workflow-in-2021-5b887bbf7dbb).
+The classic build service (`expo build`) works completely differently from EAS Build, and there is no guarantee that your app will work out of the box on EAS Build if it works on the classic build service. You can learn more about [migrating from `expo build` in the guide](/build-reference/migrating.mdx), and get a better understanding of how these two services are fundamentally different in [this two-part blog post](https://blog.expo.dev/expo-managed-workflow-in-2021-5b887bbf7dbb).
 
 ### Why does my production app does not match my development app?
 

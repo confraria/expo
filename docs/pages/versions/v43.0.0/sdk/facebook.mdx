@@ -28,13 +28,13 @@ Follow [Facebook's developer documentation](https://developers.facebook.com/docs
 
 Then follow these steps based on the platforms you're targeting. This will need to be done from the [Facebook developer site](https://developers.facebook.com/).
 
-Expo Go from the Android Play Store will use the Facebook App ID that you provide, however, all Facebook API calls in the **Expo Go from the iOS App Store will use Expo's own Facebook App ID**. This is due to underlying configuration limitations, but the good news is it means less setup for you! The downside to this is that you can't customize which permissions your app requests from Facebook (like `user_photos` or `user_friends`), or integrate Facebook login with other services like Firebase auth. If you need that functionality on iOS, you can build a standalone app. An easy way to test this is to [run a simulator build](/build-reference/simulators.md) and install the app in your simulator, or use [expo-dev-client](/development/introduction.md).
+Expo Go from the Android Play Store will use the Facebook App ID that you provide, however, all Facebook API calls in the **Expo Go from the iOS App Store will use Expo's own Facebook App ID**. This is due to underlying configuration limitations, but the good news is it means less setup for you! The downside to this is that you can't customize which permissions your app requests from Facebook (like `user_photos` or `user_friends`), or integrate Facebook login with other services like Firebase auth. If you need that functionality on iOS, you can build a standalone app. An easy way to test this is to [run a simulator build](/build-reference/simulators.mdx) and install the app in your simulator, or use [expo-dev-client](/development/introduction.mdx).
 
 > You may have to switch the app from 'development mode' to 'public mode' on the Facebook developer page before other users can log in. This requires adding a privacy policy URL, which can be as simple as a GitHub Gist.
 
 ### iOS standalone app
 
-Add your app's Bundle ID as a _Bundle ID_ in the app settings page pictured below. An easy way to test that this is set up correctly is to [run a simulator build](/build-reference/simulators.md).
+Add your app's Bundle ID as a _Bundle ID_ in the app settings page pictured below. An easy way to test that this is set up correctly is to [run a simulator build](/build-reference/simulators.mdx).
 
 <Collapsible summary="Screenshot of the Facebook developer page">
 
@@ -63,7 +63,7 @@ Add your app's Bundle ID as a _Bundle ID_ in the app settings page pictured belo
   - `facebookAutoLogAppEventsEnabled`, defaults to Facebook's default policy (Only applies to standalone apps)
   - `facebookAdvertiserIDCollectionEnabled`, defaults to Facebook's default policy (Only applies to standalone apps)
 
-You can also configure `expo-facebook` using its built-in [config plugin](/guides/config-plugins.md) if you use config plugins in your project ([EAS Build](/build/introduction.md) or `expo run:[android|ios]`). The plugin allows you to configure various properties that cannot be set at runtime and require building a new app binary to take effect.
+You can also configure `expo-facebook` using its built-in [config plugin](/guides/config-plugins.mdx) if you use config plugins in your project ([EAS Build](/build/introduction.mdx) or `expo run:[android|ios]`). The plugin allows you to configure various properties that cannot be set at runtime and require building a new app binary to take effect.
 
 <ConfigClassic>
 

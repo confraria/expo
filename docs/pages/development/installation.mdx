@@ -8,13 +8,13 @@ import { DiffBlock } from '~/ui/components/Snippet';
 import { Tab, Tabs } from '~/components/plugins/Tabs';
 import { Terminal } from '~/ui/components/Snippet';
 
-The installation steps on this page are only required to add the `expo-dev-client` library to a React Native or Bare project. To add the `expo-dev-client` library to an existing managed project, see our [Getting Started guide](getting-started.md).
+The installation steps on this page are only required to add the `expo-dev-client` library to a React Native or Bare project. To add the `expo-dev-client` library to an existing managed project, see our [Getting Started guide](getting-started.mdx).
 
 If you're just starting your project, you can create a new project from our template with:
 
 <Terminal cmd={["$ npx crna -t with-dev-client"]} />
 
-If you have an existing project, you'll need to [install the package and make a few changes](installation.md) to your **AppDelegate.m**, **MainActivity.java** and **MainApplication.java**.
+If you have an existing project, you'll need to [install the package and make a few changes](installation.mdx) to your **AppDelegate.m**, **MainActivity.java** and **MainApplication.java**.
 
 If you created your project with `expo init` or `create-expo-app`, or you already have `expo` and/or other Expo modules up and running, use the tabs marked **With Expo modules**.
 
@@ -158,8 +158,8 @@ import App from "./App";
 
 Development builds can also open and preview published updates to your app. To add this feature, add `expo-updates@0.8.0` or newer to your app if it isn't already installed, and add a small additional integration in your **AppDelegate.m** and **MainApplication.java** files.
 
-1. [Install `expo-modules` in your project](../bare/installing-expo-modules.md).
-2. [Install `expo-updates` in your project](../bare/installing-updates.md).
+1. [Install `expo-modules` in your project](../bare/installing-expo-modules.mdx).
+2. [Install `expo-updates` in your project](../bare/installing-updates.mdx).
 3. Make the following changes to complete the integration with `expo-updates`:
 
 <DiffBlock source="/static/diffs/client/app-delegate-updates.diff" />

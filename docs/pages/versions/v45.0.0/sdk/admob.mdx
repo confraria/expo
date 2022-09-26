@@ -10,7 +10,7 @@ import APISection from '~/components/plugins/APISection';
 import {APIInstallSection} from '~/components/plugins/InstallSection';
 import PlatformsSection from '~/components/plugins/PlatformsSection';
 
-> **Deprecated.** This module will be removed in SDK 46. There will be no replacement that works with the classic build service (`expo build`) because [the classic build service has been superseded by **EAS Build**](https://blog.expo.dev/turtle-goes-out-to-sea-d334db2a6b60). With **EAS Build** and [Development Builds](/development/introduction.md), you should use [react-native-google-mobile-ads](https://github.com/invertase/react-native-google-mobile-ads) instead.
+> **Deprecated.** This module will be removed in SDK 46. There will be no replacement that works with the classic build service (`expo build`) because [the classic build service has been superseded by **EAS Build**](https://blog.expo.dev/turtle-goes-out-to-sea-d334db2a6b60). With **EAS Build** and [Development Builds](/development/introduction.mdx), you should use [react-native-google-mobile-ads](https://github.com/invertase/react-native-google-mobile-ads) instead.
 
 Expo includes support for the [Google AdMob SDK](https://www.google.com/admob/) for mobile advertising, including components for banner ads and imperative APIs for interstitial and rewarded video ads. **`expo-ads-admob`** is largely based of the [react-native-admob](https://github.com/sbugert/react-native-admob) module, as the documentation and questions surrounding that module may prove helpful. A simple example implementing AdMob SDK can be found [here](https://github.com/deadcoder0904/expo-google-admob).
 
@@ -22,7 +22,7 @@ Expo includes support for the [Google AdMob SDK](https://www.google.com/admob/) 
 
 ## Configuration in app.json / app.config.js
 
-You can configure `expo-ads-admob` using its built-in [config plugin](../../../guides/config-plugins.md) if you use config plugins in your project ([EAS Build](../../../build/introduction.md) or `expo run:[android|ios]`). The plugin allows you to configure various properties that cannot be set at runtime and require building a new app binary to take effect.
+You can configure `expo-ads-admob` using its built-in [config plugin](../../../guides/config-plugins.mdx) if you use config plugins in your project ([EAS Build](../../../build/introduction.mdx) or `expo run:[android|ios]`). The plugin allows you to configure various properties that cannot be set at runtime and require building a new app binary to take effect.
 
 For the module to attribute interactions with ads to your AdMob app properly you will need to add a `googleMobileAdsAppId` property to **app.json** under `[platform].config`. More info on where to find the app ID can be found in [this Google Support answer](https://support.google.com/admob/answer/6232340). A sample valid **app.json** would look like:
 

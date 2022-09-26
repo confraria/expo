@@ -168,7 +168,7 @@ Now that we have configured Detox and written our first E2E test, let's configur
 
 #### Create eas.json
 
-The following command creates [eas.json](/build/eas-json.md) in the project's root directory:
+The following command creates [eas.json](/build/eas-json.mdx) in the project's root directory:
 <Terminal cmd={['$ eas build:configure']} />
 
 #### Configure EAS Build
@@ -219,7 +219,7 @@ if [[ "$EAS_BUILD_PLATFORM" == "ios" && "$EAS_BUILD_PROFILE" == "test" ]]; then
 fi
 ```
 
-Edit **package.json** to use [EAS Build hooks](/build-reference/npm-hooks.md) to run the above scripts on EAS Build:
+Edit **package.json** to use [EAS Build hooks](/build-reference/npm-hooks.mdx) to run the above scripts on EAS Build:
 
 ```json
 // package.json
@@ -245,7 +245,7 @@ If you have set up everything correctly you should see the successful test resul
 
 ### 6. Upload screenshots of failed test cases
 
-> This step is optional but highly recommended. 
+> This step is optional but highly recommended.
 
 When an E2E test case fails, it can be helpful to see the screenshot of the application state. EAS Build makes it easy to upload any arbitrary build artifacts using the [`buildArtifactPaths`](/build-reference/eas-json.md#buildartifactpaths) field in **eas.json**.
 

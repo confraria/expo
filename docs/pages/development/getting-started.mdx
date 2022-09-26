@@ -13,7 +13,7 @@ Development builds of your app are Debug builds of your project. To create a Dev
 
 ## Installing `expo-dev-client` in your project
 
-If you have used Expo before, [config plugins](/guides/config-plugins.md) allow you to customize your project from JavaScript without ever needing to directly modify your project in Xcode or Android Studio.
+If you have used Expo before, [config plugins](/guides/config-plugins.mdx) allow you to customize your project from JavaScript without ever needing to directly modify your project in Xcode or Android Studio.
 
 <Terminal cmd={[
 "# Only if you don't already have an Expo project",
@@ -29,9 +29,9 @@ If you have used Expo before, [config plugins](/guides/config-plugins.md) allow 
 
 ## Creating and installing your first development build
 
-However you choose to manage your native projects, we recommend using [EAS Build](eas-build.md) for the smoothest experience, especially if you do not have experience with Xcode and Android Studio builds.
+However you choose to manage your native projects, we recommend using [EAS Build](eas-build.mdx) for the smoothest experience, especially if you do not have experience with Xcode and Android Studio builds.
 
-After you configure your project as covered by the [Building with EAS guide](eas-build.md), you're ready to create your build.
+After you configure your project as covered by the [Building with EAS guide](eas-build.mdx), you're ready to create your build.
 
 <Tabs tabs={["For iOS Devices", "For Android Devices"]}>
 
@@ -55,7 +55,7 @@ Once you have registered all of the iOS devices you would like to develop on, yo
 
 </Tabs>
 
-After creating the first build, [install it on your device](/build/internal-distribution.md).
+After creating the first build, [install it on your device](/build/internal-distribution.mdx).
 
 > **Note**: If you add a library that contains native APIs to your project, for example, [`expo-secure-store`](/versions/latest/sdk/securestore/), you will have to rebuild the development client. This is because the native code of the library is not included in the development client automatically when installing the library as a dependency to your project.
 
@@ -83,7 +83,7 @@ If a bundler is detected on your local network, or if you've signed in to an Exp
 
 ## Customizing your runtime
 
-In Expo Go, you can already convert text to audio with [expo-speech](/versions/latest/sdk/speech.md), but what if you want to go the other direction and convert audio to text? The community module [`@react-native-voice/voice`](https://github.com/react-native-voice/voice) provides this capability, and thanks to config plugins, you can add it to your project!
+In Expo Go, you can already convert text to audio with [expo-speech](/versions/latest/sdk/speech.mdx), but what if you want to go the other direction and convert audio to text? The community module [`@react-native-voice/voice`](https://github.com/react-native-voice/voice) provides this capability, and thanks to config plugins, you can add it to your project!
 
 First, install the library as you normally would:
 

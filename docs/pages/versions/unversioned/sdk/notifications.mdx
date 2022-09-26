@@ -14,7 +14,7 @@ import { Collapsible } from '~/ui/components/Collapsible';
 
 The **`expo-notifications`** provides an API to fetch push notification tokens and to present, schedule, receive and respond to notifications.
 
-> Migrating from Expo's `LegacyNotifications` module? [Here's a guide to help make the transition as easy as possible](https://github.com/expo/fyi/blob/master/LegacyNotifications-to-ExpoNotifications.md).
+> Migrating from Expo's `LegacyNotifications` module? [Here's a guide to help make the transition as easy as possible](https://github.com/expo/fyi/blob/master/LegacyNotifications-to-ExpoNotifications.mdx).
 
 <PlatformsSection title="Push notifications Platform Compatibility" android ios />
 
@@ -90,7 +90,7 @@ Learn how to configure the native projects in the [installation instructions in 
 
 ### Android
 
-Firebase Cloud Messaging credentials are required for all Android apps, except in Expo Go. To set up your Android app to receive push notifications using your own FCM credentials, [carefully follow this guide](../../../push-notifications/using-fcm.md).
+Firebase Cloud Messaging credentials are required for all Android apps, except in Expo Go. To set up your Android app to receive push notifications using your own FCM credentials, [carefully follow this guide](../../../push-notifications/using-fcm.mdx).
 
 ### iOS
 
@@ -116,7 +116,7 @@ _No usage description required, see [notification-related permissions](#fetching
 
 ### Sending notifications directly through APNs and FCM
 
-If you are not using [Expo's push notification service](../../../push-notifications/sending-notifications.md) and would instead like to communicate with Apple and Firebase directly, then you should read [this guide closely](../../../push-notifications/sending-notifications-custom.md), paying **special attention to the payload formats**, since providing different formats can result in unexpected behavior on both platforms.
+If you are not using [Expo's push notification service](../../../push-notifications/sending-notifications.mdx) and would instead like to communicate with Apple and Firebase directly, then you should read [this guide closely](../../../push-notifications/sending-notifications-custom.mdx), paying **special attention to the payload formats**, since providing different formats can result in unexpected behavior on both platforms.
 
 ### Fetching a push token takes a long time on iOS
 
@@ -290,7 +290,7 @@ You can also set a custom notification color _per-notification_ directly in your
 
 ## Setting custom notification sounds
 
-Custom notification sounds are only supported when using [EAS Build](/build/introduction.md), or in the bare workflow.
+Custom notification sounds are only supported when using [EAS Build](/build/introduction.mdx), or in the bare workflow.
 
 To add custom push notification sounds to your app, add the `expo-notifications` plugin to your **app.json** file:
 
@@ -402,7 +402,7 @@ export interface FirebaseData {
 
 ### `getExpoPushTokenAsync(options: ExpoTokenOptions): ExpoPushToken`
 
-Returns an Expo token that can be used to send a push notification to the device using Expo's push notifications service. [Read more in the Push Notifications guide](../../../push-notifications/overview.md).
+Returns an Expo token that can be used to send a push notification to the device using Expo's push notifications service. [Read more in the Push Notifications guide](../../../push-notifications/overview.mdx).
 
 This method makes a request to Expo's servers, so it can reject in cases where the request itself fails (like due to the device being offline, experiencing a network timeout, or other HTTPS request failures). To provide offline support to your users, you should `try/catch` this method and implement retry logic to attempt to get the push token later, once the device is back online.
 
